@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="45dp"
+        android:left="45dp"
+        android:right="45dp"
+        android:top="45dp"
+        android:state_pressed="true">
+        <rotate android:fromDegrees="45">
+            <shape>
+                <size
+                    android:width="110dp"
+                    android:height="110dp" />
+                <gradient
+                    android:endColor="@color/colorWhite"
+                    android:startColor="@color/colorWhite" />
+
+                <stroke
+                    android:width="4dp"
+                    android:color="@color/colorOrange" />
+
+                <padding
+                    android:bottom="10dp"
+                    android:left="10dp"
+                    android:right="10dp"
+                    android:top="10dp" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

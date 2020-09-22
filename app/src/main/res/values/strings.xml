@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">InnofiedTestBhagya</string>
+    <string name="google_map_api_key">AIzaSyA2PQUyOXGcqOsf4hbr7_Ds4gl8dZaupiw</string>
+    <string name="str_ideas">Ideas</string>
+    <string name="str_cha">Charities</string>
+    <string name="str_candidates">Candidates</string>
+    <string name="str_organization">Organization</string>
+
+</resources>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="mainActivityView"
+        type="com.example.innofiedtestbhagya.view.MainActivity" />
+</data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutConstraint"
+    android:background="@color/colorOrange"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCharities"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/colorWhite"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="75dp" />
+    <ImageView
+        android:id="@+id/ivLogoCharities"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@color/colorOrange"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="358"
+        app:layout_constraintCircleRadius="135dp" />
+    <TextView
+        android:id="@+id/tvCountCharities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="01"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="358"
+        app:layout_constraintCircleRadius="134dp" />
+
+    <ImageView
+        android:id="@+id/ivChariti"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/charities"
+        app:layout_constraintBottom_toBottomOf="@id/ivCharities"
+        app:layout_constraintLeft_toLeftOf="@id/ivCharities"
+        app:layout_constraintRight_toRightOf="@id/ivCharities"
+        app:layout_constraintTop_toTopOf="@id/ivCharities" />
+
+    <TextView
+        android:id="@+id/tvCharities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivChariti"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_cha"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="358"
+        app:layout_constraintCircleRadius="35dp" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="@{(v)->mainActivityView.ivCharitisClick()}"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="75dp" />
+
+    <ImageView
+        android:id="@+id/ivCandidates"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/colorWhite"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="90dp" />
+
+    <ImageView
+        android:id="@+id/ivLogoCandidates"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@color/colorOrange"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="88"
+        app:layout_constraintCircleRadius="149dp" />
+
+    <TextView
+        android:id="@+id/tvCountCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="03"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="88"
+        app:layout_constraintCircleRadius="149dp" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="@{(v)->mainActivityView.ivCandidatesClick()}"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="90dp"  />
+
+    <ImageView
+        android:id="@+id/ivDown"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/colorWhite"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="171"
+        app:layout_constraintCircleRadius="90dp" />
+
+
+    <ImageView
+        android:id="@+id/ivCandidate"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/candid"
+        app:layout_constraintBottom_toBottomOf="@id/ivCandidates"
+        app:layout_constraintLeft_toLeftOf="@id/ivCandidates"
+        app:layout_constraintRight_toRightOf="@id/ivCandidates"
+        app:layout_constraintTop_toTopOf="@id/ivCandidates" />
+
+    <TextView
+        android:id="@+id/tvCandidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/str_candidates"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintLeft_toLeftOf="@id/ivCandidates"
+        app:layout_constraintRight_toRightOf="@id/ivCandidates"
+        app:layout_constraintTop_toBottomOf="@+id/ivCandidate" />
+
+    <ImageView
+        android:id="@+id/ivIdeas"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ideas"
+        app:layout_constraintBottom_toBottomOf="@id/ivDown"
+        app:layout_constraintLeft_toLeftOf="@id/ivDown"
+        app:layout_constraintRight_toRightOf="@id/ivDown"
+        app:layout_constraintTop_toTopOf="@id/ivDown" />
+
+    <TextView
+        android:id="@+id/tvIdeas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal"
+        android:text="Ideas"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="173"
+        app:layout_constraintCircleRadius="115dp" />
+
+    <ImageView
+        android:id="@+id/ivLogoDown"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@color/colorOrange"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="173"
+        app:layout_constraintCircleRadius="149dp" />
+
+    <TextView
+        android:id="@+id/tvCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="01"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="173"
+        app:layout_constraintCircleRadius="149dp"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="@{(v)->mainActivityView.ivIdeasClick()}"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="171"
+        app:layout_constraintCircleRadius="90dp" />
+
+    <ImageView
+        android:id="@+id/ivOrg"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/colorWhite"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="260"
+        app:layout_constraintCircleRadius="77dp" />
+
+    <ImageView
+        android:id="@+id/ivLogoOrg"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@color/colorOrange"
+        android:rotation="40"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="262"
+        app:layout_constraintCircleRadius="136dp" />
+
+    <TextView
+        android:id="@+id/tvCountOrg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="03"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="262"
+        app:layout_constraintCircleRadius="136dp" />
+
+    <ImageView
+        android:id="@+id/ivOrganiz"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/orgs"
+        app:layout_constraintBottom_toTopOf="@id/tvOrganiz"
+        app:layout_constraintLeft_toLeftOf="@id/ivOrg"
+        app:layout_constraintRight_toRightOf="@id/ivOrg"
+        app:layout_constraintTop_toTopOf="@id/ivCandidate" />
+
+    <TextView
+        android:id="@+id/tvOrganiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivOrganiz"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_organization"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/ivOrg"
+        app:layout_constraintRight_toRightOf="@id/ivOrg"
+        app:layout_constraintTop_toTopOf="@id/tvCandidate" />
+
+    <View
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:onClick="@{(v)->mainActivityView.ivOrgClick()}"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleAngle="260"
+        app:layout_constraintCircleRadius="77dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

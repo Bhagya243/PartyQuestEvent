@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="eventModel"
+            type="com.example.innofiedtestbhagya.model.EventModel" />
+
+        <variable
+            name="itemClickListener"
+            type="com.example.innofiedtestbhagya.adapter.EventListAdapter" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        card_view:cardBackgroundColor="@color/colorWhite"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ivEventImg"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage="@{eventModel.eventFlyer}"/>
+
+            <TextView
+                android:id="@+id/tvEventTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@{eventModel.eventName}"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivEventImg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvEventDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@{eventModel.description}"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivEventImg"
+                app:layout_constraintTop_toBottomOf="@id/tvEventTitle" />
+            <TextView
+                android:id="@+id/tvEventVenuLable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Venue : "
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvEventAddr"
+                app:layout_constraintLeft_toRightOf="@+id/ivEventImg"
+                app:layout_constraintTop_toBottomOf="@+id/tvEventDesc" />
+            <TextView
+                android:id="@+id/tvEventVenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="@{eventModel.eventVenue}"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvEventVenuLable"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEventDesc" />
+
+            <TextView
+                android:id="@+id/tvEventAddr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@{eventModel.address}"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivEventImg"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEventVenu" />
+
+            <TextView
+                android:id="@+id/tvEventDateLable"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Date : "
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivEventImg"
+                app:layout_constraintTop_toBottomOf="@+id/tvEventAddr" />
+
+            <TextView
+                android:id="@+id/tvEventDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="@{eventModel.startDate}"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvEventDateLable"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEventAddr" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</layout>
